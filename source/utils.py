@@ -4,7 +4,7 @@ import cv2
 import imutils
 import numpy as np
 import pickle
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 
 def read_img(file):
     image = cv2.imdecode(np.fromstring(file.read(), np.uint8), cv2.IMREAD_COLOR)
@@ -56,8 +56,8 @@ def prepare_image(image):
     to_send = 'data:image/jpg;base64, ' + str(encoded_image, 'utf-8')
     return to_send
 
-def plot_image(image):
-    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+#def plot_image(image):
+#    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
 def get_folder_dir(folder_name):
     cur_dir = os.getcwd()
