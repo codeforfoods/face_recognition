@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Detection Flask</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class = "container">
+    <div class = "starter-template">
+        <h1>Face Recognition App</h1>
+        <p class = "lead"> Upload một tấm ảnh để máy tính xác định có những ai.</p>
+        <p> Trước khi máy tính nhận ra bạn, bạn cần cho máy tính biết bạn là ai bằng cách <a href="{{ url_for('.train') }}" >click vào đây</a></p>
+        <p> Máy tính không giữ lại bức ảnh bạn vừa tải lên mà chỉ sử dụng ảnh đó để dự đoán bạn là ai.</p>
+    </div>
+</div>
+<p>
+    {% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+<header class="navbar">
+    <form action="/" method="post" enctype="multipart/form-data" >
+        <div align="center">
+            <label class="btn btn-default btn-file">
+                Browse <input type="file" name="image" style="display: none;">
+            </label>
+            <input type="submit" value="Upload & Recognize" class="btn btn-primary">
+        </div>
+    </form>
+</header>
+
+<div class="text-center">
+    {% if init %}
+        {% if face_recognized %}
+            <div class="alert alert-success" style="margin-top:18px;">
+                <strong>{{ num_faces }} khuôn mặt được tìm thấy!</strong> 
+            </div>
+            {% if image_to_show %}
+                <div>
+                    <img src="{{ image_to_show }}" style="width:600px;">
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="alert alert-danger" style="margin-top:18px;">
+                <strong>Không tìm thấy khuôn mặt trong ảnh.</strong>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+
+</body>
+</html>
