@@ -1,8 +1,8 @@
 flask
-opencv
+opencv-python
 matplotlib
 imutils
-requests==2.22.0
+requests
 scipy
 scikit-learn
 tensorflow
