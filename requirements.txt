@@ -1,0 +1,10 @@
+flask
+opencv
+matplotlib
+imutils
+requests==2.22.0
+scipy
+scikit-learn
+tensorflow
+keras_vggface
+mtcnn
