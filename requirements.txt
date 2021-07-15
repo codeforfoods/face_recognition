@@ -1,5 +1,5 @@
 flask
-opencv-contrib-python
+opencv-python
 imutils
 requests
 scipy
