@@ -6,3 +6,4 @@ scipy
 tensorflow
 keras_vggface
 mtcnn
+scikit-image
