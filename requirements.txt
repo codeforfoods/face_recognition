@@ -119,8 +119,6 @@ python-magic==0.4.24
 pytz==2021.1
 pyvi==0.1.1
 PyWavelets==1.1.1
-pywifi==1.1.12
-pywin32==300
 pywinpty==1.1.1
 PyYAML==5.4.1
 pyzmq==22.0.3
