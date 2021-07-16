@@ -54,12 +54,6 @@ Jinja2==3.0.1
 joblib==1.0.1
 json5==0.9.5
 jsonschema==3.2.0
-jupyter-client==6.1.12
-jupyter-core==4.7.1
-jupyter-server==1.8.0
-jupyterlab==3.0.16
-jupyterlab-pygments==0.1.2
-jupyterlab-server==2.5.2
 Keras==2.3.0
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
